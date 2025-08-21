@@ -24,7 +24,7 @@ import numpy as np
 import time
 import argparse
 import sys
-sys.path.append("../../../..")
+sys.path.append("../../..")
 from healthcare.data import candidiasis
 from healthcare.models import candidiasis_net
 

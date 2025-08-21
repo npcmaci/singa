@@ -24,7 +24,7 @@ from sklearn.model_selection import train_test_split
 def load_candidiasis_data(dir_path):
     import os
     data_file = os.path.join(dir_path, 'candidiasis_data.csv')
-    data = np.genfromtxt(data_file, delimiter=',', skip_header=0)
+    data = np.genfromtxt(data_file, delimiter=',', skip_header=1)
     
     X = data[:, :-1]
     y = data[:, -1]

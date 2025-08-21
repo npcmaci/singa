@@ -17,19 +17,19 @@
     under the License.
 -->
 
-# Singa for Candidiasis Disease Prediction Task
+# Singa for Cerebrovascular Disease Prediction Task
 
-## Candidiasis Disease
+## Cerebrovascular Disease
 
-Candidiasis is a fungal infection caused by Candida species, most commonly Candida albicans. It can affect various parts of the body including the mouth, throat, esophagus, vagina, and bloodstream. Early detection and prediction of candidiasis risk is crucial for effective treatment and prevention of complications.
+Cerebrovascular disease refers to a group of conditions that affect the blood vessels and blood supply to the brain. This includes conditions such as stroke, transient ischemic attack (TIA), and other disorders that affect the brain's blood circulation. Early detection and prediction of cerebrovascular disease risk is crucial for effective treatment and prevention of complications.
 
-To address this issue, we use Singa to implement a machine learning model for predicting candidiasis disease. The model uses tabular data with various clinical features to predict the likelihood of candidiasis infection.
+To address this issue, we use Singa to implement a machine learning model for predicting cerebrovascular disease. The model uses tabular data with various clinical features to predict the likelihood of cerebrovascular disease.
 
-The dataset used in this task is MIMIC-III after preprocessed. Before starting to use this model for candidiasis disease prediction, download the sample dataset for candidiasis disease prediction: https://github.com/lzjpaul/singa-healthcare/tree/main/data/candidiasis
+The dataset used in this task is MIMIC-III after preprocessed. Before starting to use this model for cerebrovascular disease prediction, download the sample dataset for cerebrovascular disease prediction: https://github.com/lzjpaul/singa-healthcare/tree/main/data/cerebrovascular
 
 ## Structure
 
-* `data` includes the scripts for preprocessing Candidiasis datasets.
+* `data` includes the scripts for preprocessing Cerebrovascular datasets.
 
 * `model` includes the MLP model construction codes by creating
   a subclass of `Module` to wrap the neural network operations 
@@ -40,5 +40,5 @@ The dataset used in this task is MIMIC-III after preprocessed. Before starting t
 
 ## Command
 ```bash
-python train.py candidiasisnet -dir pathToDataset
+python train.py cerebrovascularnet -dir pathToDataset
 ```

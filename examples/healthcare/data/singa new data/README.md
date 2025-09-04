@@ -1,0 +1,9 @@
+<!--    Licensed to the Apache Software Foundation (ASF) under one    or more contributor license agreements.  See the NOTICE file    distributed with this work for additional information    regarding copyright ownership.  The ASF licenses this file    to you under the Apache License, Version 2.0 (the    "License"); you may not use this file except in compliance    with the License.  You may obtain a copy of the License at       http://www.apache.org/licenses/LICENSE-2.0     Unless required by applicable law or agreed to in writing,    software distributed under the License is distributed on an    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY    KIND, either express or implied.  See the License for the    specific language governing permissions and limitations    under the License. -->
+
+
+
+\# Data Preprocessing for Cerebrovascular Disease Prediction
+
+During the data preprocessing stage, we constructed the task dataset based on the MIMIC-III database. We first extracted each patient’s admission records from the **ADMISSIONS** table and generated fixed time-window historical sequence samples for each admission to capture the patient’s clinical trajectory over time. Then, by combining information from **DIAGNOSES_ICD**, **PROCEDURES_ICD**, and **PRESCRIPTIONS**, we collected the diagnoses, procedures, and major medications that occurred within these windows, and retained the most frequent items through frequency filtering to build a unified code dictionary.
+
+Based on this, each sample was converted into a **multi-hot vector representation**: if a diagnosis, procedure, or medication occurred within a window, the corresponding dimension was marked. We then took the last window of each sample as the **feature** and the corresponding **Cerebrovascular Disease** column as the **label**, resulting in a sample dataset for cerebrovascular disease prediction.
